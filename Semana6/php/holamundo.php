@@ -21,7 +21,7 @@
  
         miFunction();
  
-        $edad = 21;
+        $edad = 15;
         //if simple
         if($edad < 18){
             echo "eres menor de edad";
@@ -31,9 +31,42 @@
             echo "eres mayor de edad";
             $mayorEdad = true;
         }
+ 
+        //aninados
+        $membresia = true;
+        if($edad >= 18){
+            echo " Adulto";
+            if($membresia){
+               echo "  miembro";
+            }
+        } else {
+            echo "menor de edad";
+            if($membresia){
+                echo " y miembro";
+            }
+        }
+ 
+        //switch
+        $nota = "F";
+        switch($nota){
+            case "A":
+                echo "Excelente";
+            break;
+ 
+            case "B":
+                echo "Muy bien!";
+            break;
+ 
+            case "C":
+                echo "Bien!";
+            break;
+            default:
+                echo "Necesitas mejorar";
+            break;
+        }
         
  
-        
+ 
     ?>
 </body>
 </html>
