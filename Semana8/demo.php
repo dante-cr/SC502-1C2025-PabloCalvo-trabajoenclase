@@ -6,9 +6,9 @@ $productos = [
     ["id" => 3, "nombre" => "Producto3", "cantidad" => 8, "precio" => 7.75],
     ["id" => 4, "nombre" => "Producto4", "cantidad" => 12, "precio" => 9.99],
 ];
- 
+
 $carrito = [];
- 
+
 function buscarProductoPorId($id)
 {
     global $productos;
@@ -20,13 +20,13 @@ function buscarProductoPorId($id)
     }
     return null;
 }
- 
+
 function agregarAlCarrito($idProducto, $cantidad)
 {
     global $carrito, $productos;
     //buscar el producto por id
     $producto = buscarProductoPorId($idProducto);
- 
+
     //si no es nulo
     if ($producto) {
         // verificar la cantidad si hay suficiente agregar el producto al carrito
@@ -57,7 +57,7 @@ function agregarAlCarrito($idProducto, $cantidad)
         echo "Producto no encontrado";
     }
 }
- 
+
 function calcularTotalCarrito(){
     //recorrer el carrito de compras para calcular su total
     global $carrito;
@@ -70,7 +70,7 @@ function calcularTotalCarrito(){
     }
     return $total;
 }
- 
+
 //simular una compra
 agregarAlCarrito(1,3);// 3 unidades del producto 1
 echo '<br>';
@@ -79,6 +79,5 @@ echo '<br>';
 agregarAlCarrito(3,5);//5 unidades del producto 3
 echo '<br>';
 echo "El total del carrito es $" . calcularTotalCarrito();
- 
+
 ?>
- 
